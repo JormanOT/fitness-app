@@ -13,7 +13,7 @@ body {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: white;
+    background: rgb(219, 216, 216);
     border-radius: 0px;
 }
 
