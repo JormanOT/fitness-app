@@ -11,10 +11,16 @@ body {
 ::-webkit-scrollbar {
     width: 5px;
 }
-::-webkit-scrollbar :hover{
-    background-color: #FF2625;
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 0px;
 }
 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #FF2625;
+}
 .right-arrow,
 .left-arrow {
     cursor: pointer;
