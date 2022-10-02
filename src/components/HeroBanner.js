@@ -16,17 +16,17 @@ const HeroBanner = () => {
         sx={{
           fontSize: { lg: '44px', xs: '40px' }
         }}>
-        Ejercitate, Sonrie <br /> Repite.
+        Exercise, Smile <br /> Repeat.
       </Typography>
       <Typography mb={4} fontSize="22px" lineHeight="35px">
-        Mira los ejercicios más efectivos
+        See the most effective exercises
       </Typography>
       <Button href="#exercises" variant='contained' color="error"
         sx={{
           padding: "10px",
           backgroundColor: "#ff2625"
         }}>
-        Explora los Ejercicios
+        Explore Exercises
       </Button>
       <Typography fontWeight={600} color="#ff2625" fontSize="200px"
         sx={{
@@ -36,7 +36,7 @@ const HeroBanner = () => {
             xs: 'none'
           }
         }}>
-        EJERCITATE
+        EXERCISE
       </Typography>
       <img src={BannerImage} alt="Banner" className="hero-banner-img" />
     </Box>
