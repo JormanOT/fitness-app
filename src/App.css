@@ -11,6 +11,9 @@ body {
 ::-webkit-scrollbar {
     width: 5px;
 }
+::-webkit-scrollbar :hover{
+    background-color: #FF2625;
+}
 
 .right-arrow,
 .left-arrow {
