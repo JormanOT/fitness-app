@@ -7,22 +7,22 @@ const ExerciseCard = ({ exercise }) => {
         <Link className='exercise-card' to={`/exercise/${exercise.id}`}>
             <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" />
             <Stack direction="row">
-                <Button sx={{
+                <Button variant="contained" color="error" sx={{
                     ml: '21px',
                     color: '#fff',
-                    backgroundColor: '#ffa9a9',
+                    backgroundColor: '#ad1e1e',
                     fontSize: '14px',
-                    borderRadius: '20px',
+                    borderRadius: '5px',
                     textTransform: 'capitalize'
                 }}>
                     {exercise.bodyPart}
                 </Button>
-                <Button sx={{
+                <Button variant="contained" color="primary" sx={{
                     ml: '21px',
                     color: '#fff',
-                    backgroundColor: '#fcc757',
+                    backgroundColor: '#0b4987',
                     fontSize: '14px',
-                    borderRadius: '20px',
+                    borderRadius: '5px',
                     textTransform: 'capitalize'
                 }}>
                     {exercise.target}

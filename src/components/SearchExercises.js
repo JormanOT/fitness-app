@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 
 import { Box, Stack, TextField, Button, Typography } from '@mui/material'
 import { exercisesOptions, fetchData } from '../utils/fetchData'
-import { HorizontalScrollBar } from '../components'
+import { HorizontalScrollBar , Loader } from '../components'
 
 const SearchExercises = ({ setExercises, setBodyPart, bodyPart }) => {
   const [search, setSearch] = useState('');
+  const [buttonSearch, setButtonSearch] = useState(false)
   const [bodyParts, setBodyParts] = useState([])
 
   const handleSearch = async () => {
+    setButtonSearch(true)
     if (search) {
       const exercisesData = await fetchData("https://exercisedb.p.rapidapi.com/exercises", exercisesOptions);
       const searchedExercises = exercisesData.filter(
@@ -19,7 +21,13 @@ const SearchExercises = ({ setExercises, setBodyPart, bodyPart }) => {
       );
       setSearch('');
       setExercises(searchedExercises);
+      setButtonSearch(false)
     }
+    window.scrollTo({ top : 1600 , behavior : 'smooth'})
+  }
+
+  const OnEnter = (e)=>{
+    e.key === "Enter" ? handleSearch() : console.log(':)')
   }
 
   useEffect(() => {
@@ -57,6 +65,7 @@ const SearchExercises = ({ setExercises, setBodyPart, bodyPart }) => {
           onChange={(e) => { setSearch(e.target.value.toLowerCase()) }}
           placeholder="Search Exercises"
           type="text"
+          onKeyDown={OnEnter}
         />
         <Button className="search-btn" sx={{
           bgcolor: "#ff2625",
@@ -69,7 +78,7 @@ const SearchExercises = ({ setExercises, setBodyPart, bodyPart }) => {
         }}
           onClick={handleSearch}
         >
-          Search
+          {buttonSearch ? <Loader /> : 'Search'}
         </Button>
       </Box>
       <Box sx={{ position: "relative", padding: "20px", width: "100%" }}>
