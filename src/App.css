@@ -1,6 +1,7 @@
 body {
     font-family: 'Josefin Sans';
     background-color: #faedf0;
+    overflow-x: hidden !important;
 }
 
 * {
@@ -13,8 +14,9 @@ body {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(219, 216, 216);
+    background: rgb(179, 175, 175);
     border-radius: 0px;
+    overflow-x: hidden;
 }
 
 /* Handle on hover */
@@ -64,15 +66,15 @@ body {
     position: absolute;
     right: 0;
     top: 190px;
-    width: 700px;
-    height: 850px;
+    width: 550px;
+    height: 680px;
     margin-top: -330px;
 
 }
 
 .exercise-card {
-    width: 400px;
-    height: 445px;
+    width: 300px;
+    height: 360px;
     background: #fff;
     border-top: 4px solid #FF2625;
     border-bottom-left-radius: 20px;
@@ -108,9 +110,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    width: 387px;
-    height: 381px;
+    width: 327px;
+    height: 321px;
     text-decoration: none;
+}
+.exercise-video img{
+    border-radius: 25px;
 }
 
 @media screen and (max-width:1200px) {

@@ -25,7 +25,7 @@ const ExerciseCard = ({ exercise }) => {
                     borderRadius: '5px',
                     textTransform: 'capitalize'
                 }}>
-                    {exercise.target}
+                    {exercise.target.length > 15 ? `${exercise.target.slice(0,15)}...` : exercise.target}
                 </Button>
             </Stack>
                 <Typography ml='21px' mt='11px' pb='10px' fontWeight='bold' textTransform='capitalize' color='#000' fontSize='22px'>

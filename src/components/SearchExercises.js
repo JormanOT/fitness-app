@@ -78,7 +78,7 @@ const SearchExercises = ({ setExercises, setBodyPart, bodyPart }) => {
         }}
           onClick={handleSearch}
         >
-          {buttonSearch ? <Loader /> : 'Search'}
+          {buttonSearch ? <Loader color='#fff' /> : 'Search'}
         </Button>
       </Box>
       <Box sx={{ position: "relative", padding: "20px", width: "100%" }}>

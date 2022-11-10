@@ -27,7 +27,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       if (bodyPart === 'all') {
         exercisesData = await fetchData(API.Exercises, 'exercises');
       } else {
-        exercisesData = await fetchData(`${API.Exercises}/bodyPart/${bodyPart}`,'exercises');
+        exercisesData = await fetchData(`${API.Exercises}/bodyPart/${bodyPart}`, 'exercises');
       }
       setExercises(exercisesData)
     }
@@ -39,9 +39,8 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       <Typography variant="h3" mb="46px">
         Showing Result
       </Typography>
-      <Stack direction="row" flexWrap="wrap" justifyContent="center" sx={{
-        gap: { lg: "110px", xs: "50px" }
-      }}>
+      <Stack direction="row" flexWrap="wrap" justifyContent="center"
+        sx={{gap: { lg: "110px", xs: "50px" }}}>
         {currentExercises.map((exercise, index) => (
           <ExerciseCard key={index} exercise={exercise} />
         ))}
